@@ -17,7 +17,7 @@ All images share some common characteristics as they include shared fish-pepper 
 The following images are available. Please refer to their GitHub and DockerHub repos for more details and usage information.
 
 [java-images]
-==== Java
+== Java
 
 The Java base image contain a generic shell startup script which startups Java application stored in a directory either as flat classpath application or as a fat jar.
 
@@ -67,7 +67,7 @@ The Java base image contain a generic shell startup script which startups Java a
 |===
 
 [id='jetty-images']
-==== Jetty
+== Jetty
 
 The Jetty server images automatically deploy any wars found under a certain directory, `/deployments` by default. These images can be used either as base images for your application, or linked together with a data container during runtime. These images are based directly on https://hub.docker.com/r/jboss/base-jdk/[jboss/base-jdk:8].
 
@@ -89,7 +89,7 @@ The Jetty server images automatically deploy any wars found under a certain dire
 |===
 
 [id='tomact-images']
-==== Tomcat
+== Tomcat
 
 The Tomcat server images automatically deploy any wars found under a certain directory, `/deployments` by default. These images can be used either as base images for your application, or linked together with a data container during runtime. These images are based directly on https://hub.docker.com/r/jboss/base-jdk/[jboss/base-jdk:8].
 
@@ -115,7 +115,7 @@ The Tomcat server images automatically deploy any wars found under a certain dir
 |===
 
 [id='karaf-images']
-==== Karaf
+== Karaf
 
 The Karaf server images automatically deploy any wars found under a certain directory, `/deployments` by default. These images can be used either as base images for your application, or linked together with a data container during runtime. These images are based directly on https://hub.docker.com/r/jboss/base-jdk/[jboss/base-jdk:8].
 
@@ -137,7 +137,7 @@ The Karaf server images automatically deploy any wars found under a certain dire
 |===
 
 [id='s2i-images']
-==== S2I
+== S2I
 
 For OpenShift Source-2-Image Build, two builder images are provided in https://github.com/fabric8io-images/s2i[fabric8io-images/s2i]. These are useful for creating S2I build for generice Java and Karaf based applications.
 
