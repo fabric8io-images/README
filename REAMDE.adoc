@@ -1,0 +1,22 @@
+== Fabric8 Docker Images
+
+https://fabric8.io[Fabric8] is a mircoservices platform on top of
+Kubernetes and OpenShift. It includes also a set of Docker images for
+creating Microservices but which are also usable as general Docker base
+images. This document gives an overview of all images available.
+
+These images came as _families_, whose members are slight variations with different flavors. E.g. the https://github.com/fabric8io-images/java[Java] base image has variants based on CentOS, Alpine or `jboss/base-jdk` for Java 7 and 8 with including the full JDK or only the JRE. These families are created from templates with the help of https://github.com/fabric8io-images/fish-pepper[fish-pepper], a templating engine for Docker builds. Each image family shares the same release cycle (i.e. the version) and are available from index.docker.io.
+
+The following images are available. Please refer to their GitHub and DockerHub repos for more details and usage information:
+
+.Table Fabric8 Docker Images
+|===
+| Image | GitHub | DockerHub
+
+| Java 8 image based on (https://hub.docker.com/r/jboss/base-jdk/)[jboss/base-jdk:8]
+| https://github.com/fabric8io-images/java/tree/master/images/jboss/openjdk8/jdk[fabric8io-images/java]
+|  https://hub.docker.com/r/fabric8/java-jboss-openjdk8-jdk/[fabric8/java-jboss-openjdk8-jdk]
+
+| Java 7 image based on (https://hub.docker.com/r/jboss/base-jdk/)[jboss/base-jdk:7]
+| https://github.com/fabric8io-images/java/tree/master/images/jboss/openjdk7/jdk[fabric8io-images/java]
+|  https://hub.docker.com/r/fabric8/java-jboss-openjdk7-jdk/[fabric8/java-jboss-openjdk7-jdk]
