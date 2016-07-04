@@ -13,10 +13,10 @@ The following images are available. Please refer to their GitHub and DockerHub r
 |===
 | Image | GitHub | DockerHub
 
-| Java 8 image based on (https://hub.docker.com/r/jboss/base-jdk/)[jboss/base-jdk:8]
+| Java 8 image based on https://hub.docker.com/r/jboss/base-jdk/[jboss/base-jdk:8]
 | https://github.com/fabric8io-images/java/tree/master/images/jboss/openjdk8/jdk[fabric8io-images/java]
 |  https://hub.docker.com/r/fabric8/java-jboss-openjdk8-jdk/[fabric8/java-jboss-openjdk8-jdk]
 
-| Java 7 image based on (https://hub.docker.com/r/jboss/base-jdk/)[jboss/base-jdk:7]
+| Java 7 image based on https://hub.docker.com/r/jboss/base-jdk/[jboss/base-jdk:7]
 | https://github.com/fabric8io-images/java/tree/master/images/jboss/openjdk7/jdk[fabric8io-images/java]
 |  https://hub.docker.com/r/fabric8/java-jboss-openjdk7-jdk/[fabric8/java-jboss-openjdk7-jdk]
