@@ -1,5 +1,5 @@
 # Fabric8 Docker Images
-:toc: right
+:toc: macro
 
 https://fabric8.io[Fabric8] is a mircoservices platform on top of
 Kubernetes and OpenShift. It includes also a set of Docker images for
