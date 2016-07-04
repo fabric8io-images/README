@@ -1,3 +1,5 @@
+:toc: right
+
 == Fabric8 Docker Images
 
 https://fabric8.io[Fabric8] is a mircoservices platform on top of
@@ -10,11 +12,12 @@ These images came as _families_, whose members are slight variations with differ
 All images share some common characteristics as they include shared fish-pepper _blocks_:
 
 * https://github.com/fabric8io-images/run-java-sh[run-java.sh] is a generic startup script for starting Java application which can be influenced by various environment variables. It is also used in server images for seting container specific limits (e.g. memory limits).
-* https://github.com/fabric8io/agent-bond[agent-bond] is a super JVM agent which includes https://github.com/rhuss/jolokia[jolokia] for accessing JMX information and https://github.com/prometheus/jmx_exporter[jmx_exporter] for exposing https://prometheus.io/[Prometheus] metrics. These agents also can be enabled / disabled and configured with environment variables.
+* https://github.com/fabric8io/agent-bond[Agent Bond] is a super JVM agent which includes https://github.com/rhuss/jolokia[Jolokia] for accessing JMX information and https://github.com/prometheus/jmx_exporter[jmx_exporter] for exposing https://prometheus.io/[Prometheus] metrics. These agents also can be enabled / disabled and configured with environment variables.
 
 The following images are available. Please refer to their GitHub and DockerHub repos for more details and usage information.
 
-#### Java
+[java-images]
+==== Java
 
 The Java base image contain a generic shell startup script which startups Java application stored in a directory either as flat classpath application or as a fat jar.
 
@@ -63,7 +66,8 @@ The Java base image contain a generic shell startup script which startups Java a
 |  https://hub.docker.com/r/fabric8/java-centos-openjdk7-jre/[fabric8/java-centos-openjdk7-jre]
 |===
 
-#### Jetty
+[id='jetty-images']
+==== Jetty
 
 The Jetty server images automatically deploy any wars found under a certain directory, `/deployments` by default. These images can be used either as base images for your application, or linked together with a data container during runtime. These images are based directly on https://hub.docker.com/r/jboss/base-jdk/[jboss/base-jdk:8].
 
@@ -82,4 +86,70 @@ The Jetty server images automatically deploy any wars found under a certain dire
 | Jetty 9
 | https://github.com/fabric8io-images/jetty/tree/master/images/9[fabric8io-images/jetty]
 |  https://hub.docker.com/r/fabric8/jetty-9/[fabric8/jetty-9]
+|===
+
+[id='tomact-images']
+==== Tomcat
+
+The Tomcat server images automatically deploy any wars found under a certain directory, `/deployments` by default. These images can be used either as base images for your application, or linked together with a data container during runtime. These images are based directly on https://hub.docker.com/r/jboss/base-jdk/[jboss/base-jdk:8].
+
+.Table Tomcat Images
+|===
+| Image | GitHub | DockerHub
+
+| Tomcat 6
+| https://github.com/fabric8io-images/tomcat/tree/master/images/6[fabric8io-images/tomcat]
+|  https://hub.docker.com/r/fabric8/tomcat-6/[fabric8/tomcat-6]
+
+| Tomcat 7
+| https://github.com/fabric8io-images/tomcat/tree/master/images/7[fabric8io-images/tomcat]
+|  https://hub.docker.com/r/fabric8/tomcat-7/[fabric8/tomcat-7]
+
+| Tomcat 8
+| https://github.com/fabric8io-images/tomcat/tree/master/images/8[fabric8io-images/tomcat]
+|  https://hub.docker.com/r/fabric8/tomcat-8/[fabric8/tomcat-8]
+
+| Tomcat 9
+| https://github.com/fabric8io-images/tomcat/tree/master/images/9[fabric8io-images/tomcat]
+|  https://hub.docker.com/r/fabric8/tomcat-9/[fabric8/tomcat-9]
+|===
+
+[id='karaf-images']
+==== Karaf
+
+The Karaf server images automatically deploy any wars found under a certain directory, `/deployments` by default. These images can be used either as base images for your application, or linked together with a data container during runtime. These images are based directly on https://hub.docker.com/r/jboss/base-jdk/[jboss/base-jdk:8].
+
+.Table Karaf Images
+|===
+| Image | GitHub | DockerHub
+
+| Karaf 2.4
+| https://github.com/fabric8io-images/karaf/tree/master/images/2.4[fabric8io-images/karaf]
+|  https://hub.docker.com/r/fabric8/karaf-2.4/[fabric8/karaf-2.4]
+
+| Karaf 3
+| https://github.com/fabric8io-images/karaf/tree/master/images/3[fabric8io-images/karaf]
+|  https://hub.docker.com/r/fabric8/karaf-3/[fabric8/karaf-3]
+
+| Karaf 4
+| https://github.com/fabric8io-images/karaf/tree/master/images/4[fabric8io-images/karaf]
+|  https://hub.docker.com/r/fabric8/karaf-4/[fabric8/karaf-4]
+|===
+
+[id='s2i-images']
+==== S2I
+
+For OpenShift Source-2-Image Build, two builder images are provided in https://github.com/fabric8io-images/s2i[fabric8io-images/s2i]. These are useful for creating S2I build for generice Java and Karaf based applications.
+
+.Table S2I Images
+|===
+| Image | GitHub | DockerHub
+
+| S2I Java Builder Image
+| https://github.com/fabric8io-images/s2i/tree/master/java[fabric8io-images/s2i]
+| https://hub.docker.com/r/fabric8/s2i-java/[fabric8/s2i-java]
+
+| S2I Karaf Builder Image
+| https://github.com/fabric8io-images/s2i/tree/master/karaf[fabric8io-images/s2i]
+| https://hub.docker.com/r/fabric8/s2i-karaf/[fabric8/s2i-karaf]
 |===
