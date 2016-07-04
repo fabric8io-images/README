@@ -7,9 +7,18 @@ images. This document gives an overview of all images available.
 
 These images came as _families_, whose members are slight variations with different flavors. E.g. the https://github.com/fabric8io-images/java[Java] base image has variants based on CentOS, Alpine or `jboss/base-jdk` for Java 7 and 8 with including the full JDK or only the JRE. These families are created from templates with the help of https://github.com/fabric8io-images/fish-pepper[fish-pepper], a templating engine for Docker builds. Each image family shares the same release cycle (i.e. the version) and are available from index.docker.io.
 
-The following images are available. Please refer to their GitHub and DockerHub repos for more details and usage information:
+All images share some common characteristics as they include shared fish-pepper _blocks_:
 
-.Table Fabric8 Docker Images
+* https://github.com/fabric8io-images/run-java-sh[run-java.sh] is a generic startup script for starting Java application which can be influenced by various environment variables. It is also used in server images for seting container specific limits (e.g. memory limits).
+* https://github.com/fabric8io/agent-bond[agent-bond] is a super JVM agent which includes https://github.com/rhuss/jolokia[jolokia] for accessing JMX information and https://github.com/prometheus/jmx_exporter[jmx_exporter] for exposing https://prometheus.io/[Prometheus] metrics. These agents also can be enabled / disabled and configured with environment variables.
+
+The following images are available. Please refer to their GitHub and DockerHub repos for more details and usage information.
+
+#### Java Base images
+
+The Java base image contain a generic shell startup script which startups Java application stored in a directory either as flat classpath application or as a fat jar.
+
+.Table Java Images
 |===
 | Image | GitHub | DockerHub
 
@@ -20,3 +29,25 @@ The following images are available. Please refer to their GitHub and DockerHub r
 | Java 7 image based on https://hub.docker.com/r/jboss/base-jdk/[jboss/base-jdk:7]
 | https://github.com/fabric8io-images/java/tree/master/images/jboss/openjdk7/jdk[fabric8io-images/java]
 |  https://hub.docker.com/r/fabric8/java-jboss-openjdk7-jdk/[fabric8/java-jboss-openjdk7-jdk]
+|===
+
+#### Jetty
+
+The Jetty server images automatically deploy any wars found under a certain directory, `/deployments` by default. These images can be used either as base images for your application, or linked together with a data container during runtime.
+
+.Table Jetty Images
+|===
+| Image | GitHub | DockerHub
+
+| Jetty 7
+| https://github.com/fabric8io-images/jetty/tree/master/images/7[fabric8io-images/jetty]
+|  https://hub.docker.com/r/fabric8/jetty-7/[fabric8/jetty-7]
+
+| Jetty 8
+| https://github.com/fabric8io-images/jetty/tree/master/images/8[fabric8io-images/jetty]
+|  https://hub.docker.com/r/fabric8/jetty-8/[fabric8/jetty-8]
+
+| Jetty 9
+| https://github.com/fabric8io-images/jetty/tree/master/images/9[fabric8io-images/jetty]
+|  https://hub.docker.com/r/fabric8/jetty-9/[fabric8/jetty-9]
+|===
