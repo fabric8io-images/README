@@ -14,7 +14,7 @@ All images share some common characteristics as they include shared fish-pepper 
 
 The following images are available. Please refer to their GitHub and DockerHub repos for more details and usage information.
 
-#### Java Base images
+#### Java
 
 The Java base image contain a generic shell startup script which startups Java application stored in a directory either as flat classpath application or as a fat jar.
 
@@ -22,18 +22,50 @@ The Java base image contain a generic shell startup script which startups Java a
 |===
 | Image | GitHub | DockerHub
 
-| Java 8 image based on https://hub.docker.com/r/jboss/base-jdk/[jboss/base-jdk:8]
+| Java 8 derived from https://hub.docker.com/r/jboss/base-jdk/[jboss/base-jdk:8]
 | https://github.com/fabric8io-images/java/tree/master/images/jboss/openjdk8/jdk[fabric8io-images/java]
 |  https://hub.docker.com/r/fabric8/java-jboss-openjdk8-jdk/[fabric8/java-jboss-openjdk8-jdk]
 
-| Java 7 image based on https://hub.docker.com/r/jboss/base-jdk/[jboss/base-jdk:7]
+| Java 7 derived from https://hub.docker.com/r/jboss/base-jdk/[jboss/base-jdk:7]
 | https://github.com/fabric8io-images/java/tree/master/images/jboss/openjdk7/jdk[fabric8io-images/java]
 |  https://hub.docker.com/r/fabric8/java-jboss-openjdk7-jdk/[fabric8/java-jboss-openjdk7-jdk]
+
+| OpenJDK 8, JDK on Alpine Linux
+| https://github.com/fabric8io-images/java/tree/master/images/alpine/openjdk8/jdk[fabric8io-images/java]
+|  https://hub.docker.com/r/fabric8/java-alpine-openjdk8-jdk/[fabric8/java-alpine-openjdk8-jdk]
+
+| OpenJDK 8, JRE on Alpine Linux
+| https://github.com/fabric8io-images/java/tree/master/images/alpine/openjdk8/jre[fabric8io-images/java]
+|  https://hub.docker.com/r/fabric8/java-alpine-openjdk8-jre/[fabric8/java-alpine-openjdk8-jre]
+
+| OpenJDK 7, JDK on Alpine Linux
+| https://github.com/fabric8io-images/java/tree/master/images/alpine/openjdk7/jdk[fabric8io-images/java]
+|  https://hub.docker.com/r/fabric8/java-alpine-openjdk7-jdk/[fabric8/java-alpine-openjdk7-jdk]
+
+| OpenJDK 7, JRE on Alpine Linux
+| https://github.com/fabric8io-images/java/tree/master/images/alpine/openjdk7/jre[fabric8io-images/java]
+|  https://hub.docker.com/r/fabric8/java-alpine-openjdk7-jre/[fabric8/java-alpine-openjdk7-jre]
+
+| OpenJDK 8, JDK on CentOS
+| https://github.com/fabric8io-images/java/tree/master/images/centos/openjdk8/jdk[fabric8io-images/java]
+|  https://hub.docker.com/r/fabric8/java-centos-openjdk8-jdk/[fabric8/java-centos-openjdk8-jdk]
+
+| OpenJDK 8, JRE on CentOS Linux
+| https://github.com/fabric8io-images/java/tree/master/images/centos/openjdk8/jre[fabric8io-images/java]
+|  https://hub.docker.com/r/fabric8/java-centos-openjdk8-jre/[fabric8/java-centos-openjdk8-jre]
+
+| OpenJDK 7, JDK on CentOS Linux
+| https://github.com/fabric8io-images/java/tree/master/images/centos/openjdk7/jdk[fabric8io-images/java]
+|  https://hub.docker.com/r/fabric8/java-centos-openjdk7-jdk/[fabric8/java-centos-openjdk7-jdk]
+
+| OpenJDK 7, JRE on CentOS Linux
+| https://github.com/fabric8io-images/java/tree/master/images/centos/openjdk7/jre[fabric8io-images/java]
+|  https://hub.docker.com/r/fabric8/java-centos-openjdk7-jre/[fabric8/java-centos-openjdk7-jre]
 |===
 
 #### Jetty
 
-The Jetty server images automatically deploy any wars found under a certain directory, `/deployments` by default. These images can be used either as base images for your application, or linked together with a data container during runtime.
+The Jetty server images automatically deploy any wars found under a certain directory, `/deployments` by default. These images can be used either as base images for your application, or linked together with a data container during runtime. These images are based directly on https://hub.docker.com/r/jboss/base-jdk/[jboss/base-jdk:8].
 
 .Table Jetty Images
 |===
