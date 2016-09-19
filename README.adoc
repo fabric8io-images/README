@@ -70,7 +70,7 @@ The Java base image contain a generic shell startup script which startups Java a
 |  https://hub.docker.com/r/fabric8/java-centos-openjdk7-jre/[fabric8/java-centos-openjdk7-jre]
 |===
 
-[id='jetty-images']
+[id='jetty']
 == Jetty
 
 The Jetty server images automatically deploy any wars found under a certain directory, `/deployments` by default. These images can be used either as base images for your application, or linked together with a data container during runtime. These images are based directly on https://hub.docker.com/r/jboss/base-jdk/[jboss/base-jdk:8].
@@ -92,7 +92,7 @@ The Jetty server images automatically deploy any wars found under a certain dire
 |  https://hub.docker.com/r/fabric8/jetty-9/[fabric8/jetty-9]
 |===
 
-[id='tomact-images']
+[id='tomcat']
 == Tomcat
 
 The Tomcat server images automatically deploy any wars found under a certain directory, `/deployments` by default. These images can be used either as base images for your application, or linked together with a data container during runtime. These images are based directly on https://hub.docker.com/r/jboss/base-jdk/[jboss/base-jdk:8].
@@ -118,7 +118,7 @@ The Tomcat server images automatically deploy any wars found under a certain dir
 |  https://hub.docker.com/r/fabric8/tomcat-9/[fabric8/tomcat-9]
 |===
 
-[id='karaf-images']
+[id='karaf']
 == Karaf
 
 The Karaf server images automatically deploy any wars found under a certain directory, `/deployments` by default. These images can be used either as base images for your application, or linked together with a data container during runtime. These images are based directly on https://hub.docker.com/r/jboss/base-jdk/[jboss/base-jdk:8].
@@ -140,7 +140,7 @@ The Karaf server images automatically deploy any wars found under a certain dire
 |  https://hub.docker.com/r/fabric8/karaf-4/[fabric8/karaf-4]
 |===
 
-[id='s2i-images']
+[id='s2i']
 == S2I
 
 For OpenShift Source-2-Image Build, two builder images are provided in https://github.com/fabric8io-images/s2i[fabric8io-images/s2i]. These are useful for creating S2I build for generice Java and Karaf based applications.
