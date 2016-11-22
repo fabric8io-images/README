@@ -6,7 +6,7 @@
 toc::[]
 '''
 
-https://fabric8.io[Fabric8] is a mircoservices platform on top of
+https://fabric8.io[Fabric8] is a Microservices platform on top of
 Kubernetes and OpenShift. It includes also a set of Docker images for
 creating Microservices but which are also usable as general Docker base
 images. This document gives an overview of all images available.
